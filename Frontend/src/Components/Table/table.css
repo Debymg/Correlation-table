@@ -1,0 +1,15 @@
+.correlation-grid {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .correlation-grid th,
+  .correlation-grid td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .correlation-grid th {
+    background-color: #f2f2f2;
+  }
