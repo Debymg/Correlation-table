@@ -1,0 +1,21 @@
+/* Sidebar.css */
+
+
+h3 {
+    color: #ffffff; /* Cambia este valor al color que desees */
+    font-size: 18px; /* Cambia este valor al tamaño que desees */
+
+  }
+  
+  p {
+    color: #ffffff; /* Cambia este valor al color que desees */
+    font-size: 16px; /* Cambia este valor al tamaño que desees */
+  }
+  
+  .logo {
+    width: 100px; /* Cambia este valor al ancho que desees */
+    height: auto; /* Mantén este valor en 'auto' para mantener las proporciones del logotipo */
+    align-items: center;
+
+  }
+  

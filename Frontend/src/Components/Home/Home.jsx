@@ -5,7 +5,7 @@ const Home = () => {
   
     return (
       <div class="content">
-          TABLA DE CORRELACIÓN
+          
       </div>
     );
   };

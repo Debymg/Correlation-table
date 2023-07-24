@@ -1,8 +1,18 @@
-.correlation-grid {
+.correlation-grid{
+    position: relative;
     border-collapse: collapse;
     width: 100%;
+    font-family: "Century Gothic", 'Lato', sans-serif;
+    overflow: hidden;
+
+
   }
-  
+  .main-content{
+
+    flex:4;
+    overflow: auto;
+  }
+
   .correlation-grid th,
   .correlation-grid td {
     border: 1px solid black;
@@ -13,3 +23,23 @@
   .correlation-grid th {
     background-color: #f2f2f2;
   }
+
+  .title {
+    box-sizing: border-box;
+     margin:auto;
+    position: relative;
+    font-size: 25px;
+    font-weight: 80;
+    font-family: "Century Gothic", 'Lato', sans-serif;
+    letter-spacing: var(--ls);
+    overflow: hidden;
+    background: var(--bg);
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    }
+
+
+    
+    
+  
