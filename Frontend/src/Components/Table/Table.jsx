@@ -67,10 +67,22 @@ const Row = (props) => {
 const Table = () => {
   const [tableData, setTableData] = useState(null);
   const [colorTable, setColorTable] = useState(false);
+  const [viewRawData,setViewRawData] = useState(false);
 
   const fetchData = async () => {
     try {
       const response = await fetch('http://127.0.0.1:5000/data');
+      const data = await response.json();
+      setTableData(data);
+      console.log(data);
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
+  const fetchRawData = async () => {
+    try {
+      const response = await fetch('http://127.0.0.1:5000/raw-data');
       const data = await response.json();
       setTableData(data);
     } catch (error) {
@@ -86,9 +98,18 @@ const Table = () => {
     setColorTable(!colorTable);
   };
 
+  const handleToggleDataClick = () => {
+    setViewRawData(!viewRawData);
+    if(viewRawData) {
+      fetchData();
+    } else {
+      fetchRawData();
+    }
+  };
+
   return (
     <Box className="main-content" >
-      
+      <button style={{float:'right'}}onClick={handleToggleDataClick} >Mostrar Datos Brutos</button>
       <button style={{float:'right'}}onClick={handleToggleColorClick} >Mapa de color</button>
       <TableContainer component={Paper}>
         <MuiTable aria-label="collapsible table">

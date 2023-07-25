@@ -1,17 +1,23 @@
-.correlation-grid{
-    position: relative;
-    border-collapse: collapse;
-    width: 100%;
-    font-family: "Century Gothic", 'Lato', sans-serif;
-    overflow: hidden;
 
-
-  }
   .main-content{
-
-    flex:4;
-    overflow: auto;
+    
+    display: flex;
+    color:  #474747; 
+    font-size: 16px; 
+    flex-basis:  20rem;
+    flex-grow: 1;
+    padding: 5px;
+    position: relative;
+    
   }
+
+  .main-content-p{
+    color:  #474747; 
+    font-size: 16px; 
+ 
+    
+    }
+
 
   .correlation-grid th,
   .correlation-grid td {
@@ -24,7 +30,7 @@
     background-color: #f2f2f2;
   }
 
-  .title {
+.title {
     box-sizing: border-box;
      margin:auto;
     position: relative;

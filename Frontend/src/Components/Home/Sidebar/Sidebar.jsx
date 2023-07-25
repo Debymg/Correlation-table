@@ -11,17 +11,21 @@ const containerStyle = {
   justifyContent: 'space-between',
   alignItems: 'center', // Agrega esta línea para centrar horizontalmente los elementos
   backgroundColor: '#811937',
-  width: '210px',
-  height: '100%',
-  position: 'fixed',
+  width: '1260px',
+  height: '90px',
   top: '0',
   left: '0',
   padding: '10px',
-  flex: '1'
+  flexwrap: 'wrap', 
+  flexbasis:  '20rem',
+  flexgrow: '1',
+  
+  
+  
 };
 
   const leftAlignStyle = {
-    textAlign: 'center',
+    textAlign: 'right',
   };
 
   const centerAlignStyle = {
@@ -34,10 +38,10 @@ const containerStyle = {
     textAlign: 'right',
   };
 
-  return (
+  return (  
     <div style={containerStyle}>
       <img src={review2} alt="" className='logo'/>
-      <p style={centerAlignStyle}> TABLA DE CORRELACIÓN <br /> Datos sacados del ensayo de control de calidad de disipadores metálicos TADA</p>
+      <h2 style={centerAlignStyle}> TABLA DE CORRELACIÓN <br />Datos sacados del ensayo de control de calidad de disipadores metálicos TADA</h2>
       <h3 style={rightAlignStyle}>Deborah Murati</h3>
     </div>
   );
