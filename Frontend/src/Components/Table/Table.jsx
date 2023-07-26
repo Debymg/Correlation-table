@@ -14,7 +14,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 const Row = (props) => {
-  const { row, name, info, colorTable } = props;
+  const { row, name, info, colorTable, isRawData } = props;
   const [open, setOpen] = useState(false);
 
   return (
@@ -37,7 +37,7 @@ const Row = (props) => {
             key={cellIndex}
             align="right"
             style={{
-              backgroundColor: colorTable
+              backgroundColor: colorTable && !isRawData
                 ? cell > 0
                   ? `rgba( 0, 139, 255, ${Math.abs(cell)})`
                   : `rgba(129, 25, 55, ${Math.abs(cell)})`
@@ -48,18 +48,20 @@ const Row = (props) => {
           </TableCell>
         ))}
       </TableRow>
-      <TableRow>
-        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
-          <Collapse in={open} timeout="auto" unmountOnExit>
-            <Box margin={1}>
-              <Typography variant="h6" gutterBottom component="div">
-                
-              </Typography>
-              <Typography variant="body1">{info}</Typography>
-            </Box>
-          </Collapse>
-        </TableCell>
-      </TableRow>
+      {isRawData ? null : (
+        <TableRow>
+          <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
+            <Collapse in={open} timeout="auto" unmountOnExit>
+              <Box margin={1}>
+                <Typography variant="h6" gutterBottom component="div">
+                  
+                </Typography>
+                <Typography variant="body1">{info}</Typography>
+              </Box>
+            </Collapse>
+          </TableCell>
+        </TableRow>
+      )}
     </React.Fragment>
   );
 };
@@ -105,13 +107,15 @@ const Table = () => {
     } else {
       fetchRawData();
     }
+    setViewRawData(!viewRawData);
   };
 
   return (
     <Box className="main-content" >
-      <button style={{float:'right'}}onClick={handleToggleDataClick} >Mostrar Datos Brutos</button>
-      <button style={{float:'right'}}onClick={handleToggleColorClick} >Mapa de color</button>
-      <TableContainer component={Paper}>
+      <button style={{margin:'3px'}}onClick={handleToggleDataClick} >Mostrar Datos Brutos</button>
+      <button style={{margin:'3px'}}onClick={handleToggleColorClick} >Mapa de color</button>
+      <p style={{float: 'right', paddingRight:'20px', color:'white', fontSize:'18px'}}>Deborah Murati Gil</p>
+      <TableContainer component={Paper} style={{ width: '1300px'}}>
         <MuiTable aria-label="collapsible table">
           <TableHead>
             <TableRow>
@@ -123,12 +127,15 @@ const Table = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {tableData && tableData.data && tableData.data.map((row, rowIndex) => (
-              <Row key={rowIndex} row={row} name={tableData.index[rowIndex]} info={tableData.info[tableData.index[rowIndex]]} colorTable={colorTable} />
-            ))}
-          </TableBody>
+          {tableData && tableData.data && tableData.data.map((row, rowIndex) => (
+            viewRawData
+              ? <Row key={rowIndex} row={row} name={`Ciclo ${rowIndex + 1}`} isRawData={true} />
+              : <Row key={rowIndex} row={row} name={tableData.index[rowIndex]} info={tableData.info[tableData.index[rowIndex]]} colorTable={colorTable} />
+          ))}
+        </TableBody>
         </MuiTable>
       </TableContainer>
+      
     </Box>
   );
 };

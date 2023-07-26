@@ -34,6 +34,17 @@ def serve_data():
         "info": {key: val["info"] for key, val in data.items()}
     })
 
+@app.route('/raw-data')
+def serve_raw_data():
+    df = pd.DataFrame({key: val["values"] for key, val in data.items() if key != "Ciclo"})
+
+    return jsonify({
+        "columns": df.columns.tolist(),
+        "index": df.index.tolist(),
+        "data": df.values.tolist(),
+        "info": {key: val["info"] for key, val in data.items()}
+    })
+
 if __name__ == "__main__":
     app.run()
     

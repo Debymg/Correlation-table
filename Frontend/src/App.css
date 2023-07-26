@@ -1,23 +1,59 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-  display:flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
-}
 
-.container {
+  display: -ms-grid;
+  background-size: cover;
+  background-color: #811937 ;
+  justify-content: center;
+  align-items: center ;
+  
+  margin: auto;
+  
 
-  flex-basis: 20rem;
-  flex-grow: 1;
-  overflow: hidden;
   
 }
 
+
 .main-table{
 
-  display:flex
+  display:flex;
+  align-items: center;
+  justify-content: center;
+    
+  
+  
 }
+
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+  min-height: 100vh;
+  
+}
+
+.nombre{
+  color: #ffffff; /* Cambia este valor al color que desees */
+  font-size: 14px; /* Cambia este valor al tamaño que desees */
+  position: absolute;
+  right: 0;
+  top: 0;
+
+}
+
+
+
+.logo{
+  width: 130px; /* Cambia este valor al ancho que desees */
+  height: auto; /* Mantén este valor en 'auto' para mantener las proporciones del logotipo */
+  position: relative;
+  right: -80px;
+  top: -30px;
+  
+
+}
+
+.encabezado{
+  width: auto;
+  height: 20px;
+}
+

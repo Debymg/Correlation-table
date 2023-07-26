@@ -1,32 +1,28 @@
 /* Sidebar.css */
 
 
+h2 {
+  position: relative;
+  top: 70px;
+  right: 0;
+  text-align: center;
+  align-content: center;
+  color: #ffffff; /* Cambia este valor al color que desees */
+  font-size: 24-px; /* Cambia este valor al tamaño que desees */
+
+}
+
+
+
+
 h3 {
+    position: relative;
+    top: -0;
+    right: -1150px;
     color: #ffffff; /* Cambia este valor al color que desees */
     font-size: 14px; /* Cambia este valor al tamaño que desees */
-    position: relative;
-    right: -570px;
-    top: -145px;
+
 
   }
   
-  h2 {
-    text-align: center;
-    align-content: center;
-    color: #ffffff; /* Cambia este valor al color que desees */
-    font-size: 16px; /* Cambia este valor al tamaño que desees */
-    position: relative;
-    right: 0px;
-    top: -85px;
-
-  }
-  
-  .logo {
-    width: 90px; /* Cambia este valor al ancho que desees */
-    height: auto; /* Mantén este valor en 'auto' para mantener las proporciones del logotipo */
-    position: relative;
-    right: 570px;
-    
-
-  }
   
