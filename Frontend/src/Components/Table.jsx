@@ -14,10 +14,11 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import ReactPlayer from "react-player";
 
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+
 const Row = (props) => {
   const { row, name, info, colorTable, isRawData } = props;
   const [open, setOpen] = useState(false);
-
   return (
     <React.Fragment>
       <TableRow sx={{ "& > *": { borderBottom: "unset" } }}>
@@ -157,7 +158,7 @@ const Table = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:5000/data");
+      const response = await fetch(`${BACKEND_URL}/data`);
       const data = await response.json();
       setTableData(data);
       console.log(data);
@@ -168,7 +169,7 @@ const Table = () => {
 
   const fetchRawData = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:5000/raw-data");
+      const response = await fetch(`${BACKEND_URL}/raw-data`);
       const data = await response.json();
       setTableData(data);
     } catch (error) {
