@@ -1,59 +1,43 @@
 #root {
-
   display: -ms-grid;
   background-size: cover;
-  background-color: #811937 ;
+  background-color: #811937;
   justify-content: center;
-  align-items: center ;
-  
-  margin: auto;
-  
+  align-items: center;
 
-  
+  margin: auto;
 }
 
-
-.main-table{
-
-  display:flex;
+.main-table {
+  display: flex;
   align-items: center;
   justify-content: center;
-    
-  
-  
 }
 
-.box{
+.box {
   display: flex;
   justify-content: center;
-  align-items: center ;
+  align-items: center;
   min-height: 100vh;
-  
 }
 
-.nombre{
+.nombre {
   color: #ffffff; /* Cambia este valor al color que desees */
   font-size: 14px; /* Cambia este valor al tamaño que desees */
   position: absolute;
   right: 0;
   top: 0;
-
 }
 
-
-
-.logo{
+.logo {
   width: 130px; /* Cambia este valor al ancho que desees */
   height: auto; /* Mantén este valor en 'auto' para mantener las proporciones del logotipo */
   position: relative;
   right: -80px;
   top: -30px;
-  
-
 }
 
-.encabezado{
+.encabezado {
   width: auto;
   height: 20px;
 }
-
