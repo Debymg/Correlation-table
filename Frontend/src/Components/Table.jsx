@@ -285,7 +285,7 @@ const Table = () => {
       {showVideo && (
         <div style={{ display: "flex", alignItems: "center" }}>
           <ReactPlayer
-            url="https://www.youtube.com/watch?v=pdG-qgYGzNc"
+            url="https://www.youtube.com/watch?v=PLJNp9FK3dQ"
             playing
           />
           <TextBlock />
