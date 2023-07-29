@@ -41,3 +41,16 @@
   width: auto;
   height: 20px;
 }
+
+
+  
+h2 {
+  text-align: center;
+  align-content: center;
+  color: #ffffff; /* Cambia este valor al color que desees */
+  font-size: 16px; /* Cambia este valor al tamaño que desees */
+  position: relative;
+  right: 0px;
+  top: -85px;
+
+}
