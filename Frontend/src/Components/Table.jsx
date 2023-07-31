@@ -108,8 +108,8 @@ const ConclusionBlock = () => {
         padding: "5px",
         margin: "10px",
         color: "white",
-        justifyContent: "center",
-        textAlign: "center",
+        justifyContent: "lefth",
+        textAlign: "lefth",
         fontSize: "16px",
       }}
     >
